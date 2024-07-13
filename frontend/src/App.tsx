@@ -49,16 +49,25 @@ const App = () => {
   console.log(pages);
 
   return (
-    <div>
+    <div
+      style={{margin: '0 auto', width: '80%'}}
+    >
+      <h1
+        style={{textAlign: 'center'}}
+      >
+        Infinite Scroll Example
+      </h1>
       {
         pages.map((page, index) => (
           <div
+            style={{border: '1px solid black', padding: '10px', margin: '10px 0'}}
             key={index}
           >
             {
               page.data.map((product: Item) => (
                 <div 
                   key={product.id}
+                  style={{border: '1px solid black', padding: '10px', margin: '10px 0'}}
                 >
                   <h2>{product.name}</h2>
                   <p>{product.price}</p>
